@@ -3,3 +3,7 @@ scikit-surprise
 scikit-learn
 streamlit
 matplotlib
+requests
+time
+certifi
+os

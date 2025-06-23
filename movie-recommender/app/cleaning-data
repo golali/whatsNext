@@ -1,0 +1,21 @@
+import pandas as pd 
+import matplotlib.pyplot as plt
+
+# loading the data
+df = pd.read_csv("data/netflix_titles.csv", encoding='latin1')
+
+# taking a peek at the data
+#print(df.head)
+
+# dropping empty columns
+empty_to_drop = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+df.drop(df.columns[empty_to_drop], axis=1, inplace=True)
+
+# dropping columns that will not be used
+df.drop(['cast', 'country', 'date_added', 'rating', 'duration'], axis=1, inplace=True)
+
+# column names
+for i, col in enumerate(df.columns):
+    print(f"{i}: {col}")
+
+print(df.head)

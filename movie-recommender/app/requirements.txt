@@ -1,6 +1,7 @@
 pandas
 scikit-surprise
 scikit-learn
+sklearn
 streamlit
 matplotlib
 requests
